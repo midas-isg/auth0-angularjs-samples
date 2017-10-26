@@ -1,3 +1,13 @@
+# MIDAS SSO example with OIDC using only AngularJS
+An example of a Single-Page Application using AngularJS on Node.JS, midas-sso and Auth0.
+
+## Hook up to midass-sso
+
+This example shows how to hook up to midass-sso for the logged in user. After user signs up to midas-sso via MIDAS Accounts, the user will automatically get `ISG_USER` role. The example also demonstrates how to fetch user information from Auth0 and put into local storage for further useage.
+
+
+
+The below is the original information from auth0-samples/oidc-sso-sample.
 # Auth0 AngularJS Samples
 
 These samples demonstrate how to add authentication to an AngularJS application with Auth0. Each folder contains a distinct application so that various Auth0 features can be viewed in isolation.
