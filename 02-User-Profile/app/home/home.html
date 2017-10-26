@@ -1,6 +1,8 @@
 <h4 ng-if="vm.auth.isAuthenticated()">
-    You are logged in! You can now view your <a ui-sref="profile">profile area</a>.
+    <p>You are logged in! You can <a ng-click="vm.auth.signoff()"> Sign off from MIDAS-SSO</a>.</p>
+    <p>You can now view your <a ui-sref="profile">profile area</a>.</p>
 </h4>
 <h4 ng-if="!vm.auth.isAuthenticated()">
-  You are not logged in! Please <a ng-click="vm.auth.login()">Log In</a> to continue.
+  <!--You are not logged in! Please <a ng-click="vm.auth.login()">Log In</a> to continue.-->
+  You are not logged in! Please <a href="{{vm.auth.midasSsoHref}}">SSO via MIDAS Accounts</a> to continue.
 </h4>
