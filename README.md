@@ -7,7 +7,7 @@ This example shows how to hook up to midass-sso for the logged in user. After us
 
 
 
-The below is the original information from auth0-samples/oidc-sso-sample.
+The below is the original information from auth0-samples/auth0-angularjs-samples.
 # Auth0 AngularJS Samples
 
 These samples demonstrate how to add authentication to an AngularJS application with Auth0. Each folder contains a distinct application so that various Auth0 features can be viewed in isolation.
