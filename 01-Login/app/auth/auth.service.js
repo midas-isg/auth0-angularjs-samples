@@ -25,6 +25,20 @@
           });
           console.log(err);
           alert('Error: ' + err.error + '. Check the console for further details.');
+        } else {
+            angularAuth0.renewAuth({
+                timeout: 1000, // Set it to be quick to refresh controllers. A better way is to notify controllers.
+                redirectUri: AUTH0_CALLBACK_URL,
+                usePostMessage: true
+            }, function (err, result) {
+                if (err || (result && result.error)) { // For auth0.js version 8.8, the error shows up at result.error
+                    if (result)
+                        err = {error: result.errorDescription}; // For auth0.js version 8.8, the error message shows up at result.errorDescription
+                    console.log(`Could not get a new token using silent authentication (${err.error}). Redirecting to login page...`);
+                } else {
+                    setSession(result);
+                }
+            });
         }
       });
     }

@@ -3,3 +3,4 @@ node_modules
 auth0-variables.js
 npm-debug.log
 .env
+.idea/
